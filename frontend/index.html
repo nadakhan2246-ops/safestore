@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SafeStore | Fault-Tolerant Document Storage</title>
+<link rel="icon" id="favicon-link" href="">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-body">
+
+  <div id="toast-container" class="toast-container"></div>
+
+  <div class="auth-wrapper">
+    <div class="auth-brand-panel">
+      <div class="brand-mark">
+        <div class="brand-logo" id="auth-logo">SS</div>
+        <h1>SafeStore</h1>
+      </div>
+      <p class="brand-tagline">"Your documents. Safely stored. Always available."</p>
+      <div class="auth-mascot-wrap mascot-float" id="auth-mascot"></div>
+      <p class="brand-description">
+        Securely store, replicate, monitor, and recover your important
+        documents across distributed storage nodes. If one node becomes
+        unavailable, your files remain accessible through healthy replicas.
+      </p>
+
+      <div class="feature-cards">
+        <div class="feature-card"><span class="fc-icon">⧉</span> 3-Way Document Replication</div>
+        <div class="feature-card"><span class="fc-icon">🛡</span> Fault-Tolerant Storage</div>
+        <div class="feature-card"><span class="fc-icon">↻</span> Automatic Node Recovery</div>
+        <div class="feature-card"><span class="fc-icon">◍</span> Real-Time Node Monitoring</div>
+      </div>
+
+      <ul class="brand-points">
+        <li>Secure Authentication</li>
+        <li>Distributed Storage</li>
+        <li>High Availability</li>
+      </ul>
+    </div>
+
+    <div class="auth-form-panel">
+      <div class="auth-card">
+
+        <div class="auth-tabs">
+          <button class="auth-tab active" id="tab-login" type="button">Login</button>
+          <button class="auth-tab" id="tab-register" type="button">Register</button>
+        </div>
+
+        <!-- LOGIN FORM -->
+        <form id="login-form" class="auth-form">
+          <h2>Welcome back</h2>
+          <p class="auth-subtitle">Log in to access your document dashboard.</p>
+
+          <label for="login-identifier">Email or Username</label>
+          <input type="text" id="login-identifier" placeholder="you@example.com" autocomplete="username" required>
+
+          <label for="login-password">Password</label>
+          <div class="password-field">
+            <input type="password" id="login-password" placeholder="••••••••" autocomplete="current-password" required>
+            <button type="button" class="password-toggle" data-toggle-for="login-password" aria-label="Show password">👁</button>
+          </div>
+
+          <div id="login-error" class="form-error hidden"></div>
+
+          <button type="submit" class="btn btn-primary btn-block" id="login-submit">
+            <span class="btn-label">Log In</span>
+            <span class="btn-spinner hidden"></span>
+          </button>
+
+          <p class="auth-switch">
+            Don't have an account?
+            <a href="#" id="go-to-register">Register here</a>
+          </p>
+        </form>
+
+        <!-- REGISTER FORM -->
+        <form id="register-form" class="auth-form hidden">
+          <h2>Create your account</h2>
+          <p class="auth-subtitle">Set up secure access to your personal document vault.</p>
+
+          <label for="register-username">Username</label>
+          <input type="text" id="register-username" placeholder="jane_doe" autocomplete="username" required minlength="3">
+
+          <label for="register-email">Email</label>
+          <input type="email" id="register-email" placeholder="you@example.com" autocomplete="email" required>
+
+          <label for="register-password">Password</label>
+          <div class="password-field">
+            <input type="password" id="register-password" placeholder="At least 8 characters" autocomplete="new-password" required minlength="8">
+            <button type="button" class="password-toggle" data-toggle-for="register-password" aria-label="Show password">👁</button>
+          </div>
+          <div class="password-strength">
+            <div class="strength-bar"><div class="strength-bar-fill" id="strength-bar-fill"></div></div>
+            <div class="strength-label" id="strength-label">Password strength</div>
+          </div>
+
+          <label for="register-confirm">Confirm Password</label>
+          <div class="password-field">
+            <input type="password" id="register-confirm" placeholder="Re-enter password" autocomplete="new-password" required>
+            <button type="button" class="password-toggle" data-toggle-for="register-confirm" aria-label="Show password">👁</button>
+          </div>
+
+          <div id="register-error" class="form-error hidden"></div>
+
+          <button type="submit" class="btn btn-primary btn-block" id="register-submit">
+            <span class="btn-label">Create Account</span>
+            <span class="btn-spinner hidden"></span>
+          </button>
+
+          <p class="auth-switch">
+            Already have an account?
+            <a href="#" id="go-to-login">Log in</a>
+          </p>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="js/mascot.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>
